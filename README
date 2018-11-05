@@ -1,0 +1,7 @@
+How to build
+a. Get build tools for your platform. gcc etc.
+b. run the make file in the root project directory. Makefile.
+
+Sample file in the example folder.
+
+Enjoy :)
