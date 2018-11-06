@@ -21,6 +21,7 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
+#include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
 
@@ -29,7 +30,13 @@
 #include "rand.h"
 #include "sha2.h"
 #include "pbkdf2.h"
+#include "bip39_chinese_simplified.h"
+#include "bip39_chinese_traditional.h"
 #include "bip39_english.h"
+#include "bip39_french.h"
+#include "bip39_italian.h"
+#include "bip39_japanese.h"
+#include "bip39_spanish.h"
 #include "options.h"
 #include "memzero.h"
 
@@ -85,7 +92,7 @@ const char *mnemonic_from_data(const uint8_t *data, int len)
 	memcpy(bits, data, len);
 
 	int mlen = len * 3 / 4;
-	static CONFIDENTIAL char mnemo[24 * 10];
+    static CONFIDENTIAL char mnemo[24 * 10];
 
 	int i, j, idx;
 	char *p = mnemo;
@@ -120,7 +127,7 @@ const uint16_t *mnemonic_from_data_indexes(const uint8_t *data, int len)
 	memcpy(bits, data, len);
 
 	int mlen = len * 3 / 4;
-	static CONFIDENTIAL uint16_t mnemo[24];
+    static CONFIDENTIAL uint16_t mnemo[24];
 
 	int i, j, idx;
 	for (i = 0; i < mlen; i++) {

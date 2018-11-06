@@ -1,0 +1,14 @@
+Cryptographic functions used
+
+a. mnemonic_generate(strength) file bip39.c
+This function generates a mnemonic string. It takes as argument the key strength which is a value between 128 and 256.
+
+b.  mnemonic_to_seed(mnemonic, passphrase, seed,0) file bip39.c
+This function generates a bip39 seed. It takes parameters which includes the mnemonic string, a passphrase and the bip39 seed.
+The optional parameter is the progress method.
+
+c. hdnode_from_seed(seed,64, SECP256K1_NAME, &node) in bip32.c
+This function generates a bip32 node. It takes as argument a bip39 seed, length of the node, name of the elliptical curve used and the node that would be created.
+
+d. hdnode_serialize_private(&node, fingerprint, VERSION_PRIVATE, rootkey, strlen(rootkey)) in bip32.c
+This function generates the bip32 rootkey. It takes as argument the node created above, the fingerprint length,version type, the rootkey struct which is generated and the length of the root key struct that is generated.
