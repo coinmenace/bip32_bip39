@@ -1,6 +1,11 @@
 How to build
 a. Get build tools for your platform. gcc etc.
-b. run the make file in the root project directory. Makefile.
+
+b. clone the repository using
+git clone https://github.com/coinmenace/bip32_bip39.git
+
+c. run the make file in the root project directory. Makefile.
+make -j4
 
 Sample file in the example folder.
 
