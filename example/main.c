@@ -13,7 +13,7 @@ int main(void){
     int strength = 128;
     int keylength = 64;
     //3,6,9,12,15,18,21,24
-    int numwords = 6;
+    //int numwords = 6;
     //this generates the mnemonic
     const char *mnemonic = generateMnemonic(strength);
 
